@@ -27,5 +27,19 @@ data class ProductData(
     val updated_at: String,
     val weight: String?,
     val description: String,
+    val images: ArrayList<String>?,
+    val configurable_option: ArrayList<ConfigurableOption>?,
+
     // Add other properties as needed
+)
+data class ConfigurableOption(
+    val attribute_id: Int,
+    val type: String,
+    val attribute_code: String,
+    val attributes: ArrayList<Attribute>,
+
+
+)
+
+data class Attribute(val value: String, val price: String,   val images: ArrayList<String>?,
 )
