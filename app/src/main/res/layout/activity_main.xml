@@ -7,25 +7,236 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/bannerImage_slider"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:iss_auto_cycle="true"
         app:iss_period="1000"
+        app:iss_text_color="@color/black"
         app:iss_delay="1000"
         app:iss_text_align="CENTER"/>
 
-    <TextView
-        android:id="@+id/brandName"
+    <RelativeLayout
+        android:id="@+id/brandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/bannerImage_slider"
+       >
+
+        <TextView
+            android:id="@+id/brandName"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:hint="brand Name"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:textSize="19sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/collection"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textSize="19sp"
+            android:hint="3.50KWD"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/onceCollection"
+        android:layout_below="@id/brandLayout"
         android:layout_width="wrap_content"
         android:textStyle="bold"
         android:layout_margin="5dp"
+        android:hint="one collection weekly"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
         android:textSize="19sp"
         android:layout_height="wrap_content"/>
 
-    
 
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onceCollection"
+        android:layout_margin="10dp"
+        android:hint="Color:"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image1"
+        app:civ_border_width="4dp"
+        android:layout_below="@id/color"
+        android:src="@drawable/default_error"
+        app:civ_border_color="#FF000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image2"
+        app:civ_border_width="4dp"
+        android:layout_below="@id/color"
+        android:layout_toEndOf="@id/image1"
+        android:src="@drawable/default_error"
+        app:civ_border_color="#FF000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image3"
+        app:civ_border_width="4dp"
+        android:layout_below="@id/color"
+        android:layout_toEndOf="@id/image2"
+        android:src="@drawable/default_error"
+        app:civ_border_color="#FF000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image4"
+        app:civ_border_width="4dp"
+        android:layout_below="@id/color"
+        android:layout_toEndOf="@id/image3"
+        android:src="@drawable/default_error"
+        app:civ_border_color="#FF000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image5"
+                app:civ_border_width="4dp"
+                android:layout_below="@id/color"
+                android:layout_toEndOf="@id/image4"
+                android:src="@drawable/default_error"
+                app:civ_border_color="#FF000000"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image6"
+        app:civ_border_width="4dp"
+        android:layout_below="@id/color"
+        android:layout_toEndOf="@id/image5"
+        android:src="@drawable/default_error"
+        app:civ_border_color="#FF000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_below="@id/image6"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="or 4 interest -free payment"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.88KWD Learn More"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        />
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:text="tabby"
+        android:backgroundTint="#4CAF50"/>
+</androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:textSize="20sp"
+        android:layout_below="@id/card"
+        android:layout_margin="15dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/negativeBtn"
+        android:layout_below="@id/quantity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/count"
+        android:layout_below="@id/quantity"
+        android:layout_width="50dp"
+        android:backgroundTint="@color/white"
+        android:layout_toEndOf="@id/negativeBtn"
+        android:layout_height="50dp"
+        android:hint="1"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/positionBtn"
+        android:layout_below="@id/quantity"
+        android:layout_width="50dp"
+        android:layout_toEndOf="@id/count"
+        android:layout_height="50dp"
+        android:hint="+"
+        android:textStyle="bold"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/black"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/productInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/positionBtn"
+        android:text="productInformation"
+        android:textSize="20sp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:backgroundTint="@color/black"
+        android:text="Add to bag"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:layout_above="@id/share"/>
+    <Button
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:text="Add to bag"
+        android:padding="10dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+       android:layout_marginBottom="10dp"/>
 
 </RelativeLayout>
