@@ -63,12 +63,12 @@ class MainActivity : AppCompatActivity() {
         showMore.setOnClickListener {
             if (isMore){
                 isMore = false
-                showMore.setImageResource(R.drawable.baseline_keyboard_arrow_up_24)
+                showMore.setImageResource(R.drawable.ic_launcher_foreground)
                 brandDesc.maxLines = Int.MAX_VALUE
 
             }else{
                 isMore=true
-                showMore.setImageResource(R.drawable.baseline_expand_more_24)
+                showMore.setImageResource(R.drawable.ic_launcher_background)
                 brandDesc.maxLines = 10
             }
         }

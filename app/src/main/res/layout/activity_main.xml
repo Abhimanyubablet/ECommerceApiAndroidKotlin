@@ -186,7 +186,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/baseline_expand_more_24"/>
+                    android:src="@drawable/ic_launcher_foreground"/>
 
             </RelativeLayout>
             <TextView
